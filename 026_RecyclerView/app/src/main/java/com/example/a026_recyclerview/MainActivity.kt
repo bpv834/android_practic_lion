@@ -113,8 +113,7 @@ class MainActivity : AppCompatActivity() {
         // 생성자로 viewBinding 객체를 받는다.
         // 부모의 생성자로 보여질 View를 전달을 한다.
         // 부모의 생성자로 전달한 View 가 RecyclerView의 항목 하나로 쓰여진다.
-        inner class ViewHolderClass(var rowBinding: RowBinding) : RecyclerView.ViewHolder(rowBinding.root),
-            View.OnClickListener {
+        inner class ViewHolderClass(var rowBinding: RowBinding) : RecyclerView.ViewHolder(rowBinding.root), View.OnClickListener {
             override fun onClick(v: View?) {
                 // adapterPosition : ViewHolder를 통해 구성된 항목의 순서 값
                 // 사용자가 누른 항목의 순서 값으로 사용하였다
