@@ -1,0 +1,27 @@
+LinearLayout
+    - orientation : vertical
+
+    MaterialCheckBox
+        - id : checkBoxAll
+        - text : 동물전체
+        - textAppearance : Large
+        - checkedState : unchecked
+
+    LinearLayout
+        - orientation : vertical
+        - layout_marginStart : 20dp
+
+        CheckBox
+            - id : checkBoxDog
+            - text : 강아지
+            - textAppearance : Large
+
+        CheckBox
+            - id : checkBoxCat
+            - text : 고양이
+            - textAppearance : Large
+
+        CheckBox
+            - id : checkBoxParrot
+            - text : 앵무새
+            - textAppearance : Large

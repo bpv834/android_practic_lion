@@ -1,0 +1,36 @@
+LinearLayout
+    - orientation : vertical
+
+    LinearLayout
+        - orientation : horizontal
+        - layout_height : wrap_content
+
+        TextView
+            - text : 이름
+            - textAppearance : Large
+            - layout_weight : 삭제
+
+        EditText
+            - text : 삭제
+
+    LinearLayout
+        - orientation : horizontal
+        - layout_height : wrap_content
+
+        TextView
+            - text : 나이
+            - textAppearance : Large
+            - layout_weight : 삭제
+
+        EditText
+            - text : 삭제
+
+    LinearLayout
+        - orientation : horizontal
+        - layout_height : wrap_content
+
+        Button
+            - text : 확인
+
+        Button
+            - text : 취소

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="이름을 입력해주세요" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <TextView
+                android:id="@+id/txtView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <RadioGroup
+                android:id="@+id/genderRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtnM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="남" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnFe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="여" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <TextView
+                android:id="@+id/txtView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종류"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/typeChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="10dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDog"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강아지" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCat"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양이" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipParrot"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="앵무새" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <TextView
+                android:id="@+id/txtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="좋아하는 간식"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/snackChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:chipSpacingHorizontal="10dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipApple"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사과" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBanana"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="바나나" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipKorApple"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대추" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <TextView
+                android:id="@+id/txtView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="나이"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1.0"
+                android:valueFrom="0.0"
+                android:valueTo="100.0" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <TextView
+                android:id="@+id/txtView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="몸무게 범위"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangeSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1.0"
+                android:valueFrom="0.0"
+                android:valueTo="200.0"
+                app:values="@array/slider_range_value"
+             />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnInputInfo"
+                    android:layout_weight="1"
+                    android:text="정보 입력"
+                    android:layout_width="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_height="wrap_content"></Button>
+
+                <Button
+                    android:id="@+id/btnShowInfo"
+                    android:layout_weight="1"
+                    android:text="정보 출력"
+                    android:layout_width="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_height="wrap_content"></Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/showTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>
