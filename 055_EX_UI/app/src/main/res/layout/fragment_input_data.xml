@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InputDataFragment" >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbarInputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@android:drawable/ic_media_rew"
+        app:menu="@menu/toolbar_input_data_menu"/>
+
+    <TextView
+        android:text="동물 종류!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonDogInputData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강아지" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCatInputData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고양이" />
+
+            <RadioButton
+                android:id="@+id/radioButtonParrotInputData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="앵무새" />
+        </RadioGroup>
+
+    <TextView
+        android:text="이름 : !"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextNameInputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="이름 입력"/>
+
+    <TextView
+        android:text="나이 : !"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextAgeInputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="나이 입력"/>
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="화면들" >
+        <menu >
+            <item
+                android:id="@+id/navigation_main_item1"
+                android:checkable="true"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="RecyclerFragment"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/navigation_main_item2"
+                android:checkable="true"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="TabFragment"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,75 @@
+[ fragment_recycler.xml ]
+
+LinearLayout
+    - orientation : vertical
+
+    MaterialToolbar
+        - id : materialToolbarRecycler
+        - background : transparent
+
+    RecyclerView
+        - id : recyclerViewRecycler
+
+
+[ activity_main.xml ]
+
+ConstraintLayout
+    - id : main
+
+    DrawerLayout
+        - layout_constraintBottom_toBottomOf : parent
+        - layout_constraintEnd_toEndOf : parent
+        - layout_constraintStart_toStartOf : parent
+        - layout_constraintTop_toTopOf : parent
+        - id : drawerlayoutMain
+        - layout_width : 0dp
+        - layout_height : 0dp
+
+        CoordinatorLayout
+            - layout_width : match_parent
+            - layout_height : match_parent
+
+            FragmentContainerView
+                - id : fragmentContainerViewMain
+                - layout_width : match_parent
+                - layout_height : match_parent
+
+    NavigationView
+        - id : navigationViewMain
+        - layout_gravity : start
+        - layout_width : match_parent
+        - layout_height : match_parent
+        - menu : navigation_main_menu
+
+
+[ fragment_tab.xml ]
+
+LinearLayout
+    - orientation : vertical
+
+    MaterialToolbar
+        - id : materialToolbarTab
+        - background : transparent
+
+[ dialog_recycler_input.xml]
+
+LinearLayout
+    - orientation :vertical
+    - padding : 10dp
+
+    EditText (Plain)
+        - id : editTextDialogRecycler
+        - text : 삭제
+        - hint : 문자열 입력
+        - imeOptions : actionDone
+
+
+[ fragment_recycler_row.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - padding : 10dp
+
+    TextView
+        - id : textViewRecyclerRow
+        - textAppearance : Large
