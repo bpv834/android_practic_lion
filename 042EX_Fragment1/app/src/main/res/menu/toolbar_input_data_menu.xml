@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="원하는 항목을 골라주세요" >
+        <menu >
+            <item
+                android:id="@+id/navigationMainAll"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="전체 보기"
+                android:checkable="true"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/navigationMainDog"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="강아지 보기"
+                android:checkable="true"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/navigationMainCat"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="고양이 보기"
+                android:checkable="true"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/navigationMainParrot"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="앵무새"
+                android:checkable="true"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

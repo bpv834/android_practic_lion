@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.InputFragment">
+
+    <!-- Toolbar: match_parent로 변경 -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbarFixFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral80"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:menu="@menu/toolbar_menu_input_fragment"
+        app:navigationIcon="@android:drawable/ic_media_rew" />
+
+    <!-- 제목: match_parent로 변경, gravity=center로 텍스트 중앙 정렬 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="운동부"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <!-- 버튼 그룹: match_parent로 변경 -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/btnGroupTypeFixFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDogSoccerFixFragment"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="축구부" />
+
+        <Button
+            android:id="@+id/btnDogBaseballInputFragment"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="야구부" />
+
+        <Button
+            android:id="@+id/btnDogBasketballInputFragment"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="농구부" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!-- 이름 입력: match_parent로 변경 -->
+    <EditText
+        android:id="@+id/editTextNameInputFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="이름 입력"
+        android:inputType="text"
+        android:text="Name" />
+
+    <!-- 나이 입력: match_parent로 변경 -->
+    <EditText
+        android:id="@+id/editTextAgeInputFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="나이 입력"
+        android:inputType="text"
+        android:text="Name" />
+
+</LinearLayout>
