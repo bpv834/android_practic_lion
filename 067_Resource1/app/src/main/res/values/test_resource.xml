@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str1">안녕하세요</string>
+    <string name="str2">반갑습니다</string>
+
+    <!-- 양식 문자열 -->
+    <!-- 문자열 : %s, 정수 : %d, 실수 : %f, 그 외 : %s -->
+    <!-- 만약 오류가 발생하면  formatted="false" 를 넣어주세요 -->
+    <string name="str3">이름은 %s이고, 나이는 %d 살입니다</string>
+
+    <bool name="bool1">true</bool>
+    <integer name="int1">100</integer>
+
+    <string-array name="str_array">
+        <item>문자열1</item>
+        <item>문자열2</item>
+        <item>문자열3</item>
+    </string-array>
+
+    <integer-array name="int_array">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+    </integer-array>
+
+    <!-- RGB -->
+    <color name="color1">#F00</color>
+    <!-- ARGB -->
+    <color name="color2">#5F00</color>
+    <!-- RRGGBB -->
+    <color name="color3">#00FF00</color>
+    <!-- AARRGGBB -->
+    <color name="color4">#8000FF00</color>
+
+    <dimen name="dimen1">1px</dimen>
+    <dimen name="dimen2">1dp</dimen>
+    <dimen name="dimen3">1sp</dimen>
+    <dimen name="dimen4">1in</dimen>
+    <dimen name="dimen5">1mm</dimen>
+    <dimen name="dimen6">1pt</dimen>
+</resources>

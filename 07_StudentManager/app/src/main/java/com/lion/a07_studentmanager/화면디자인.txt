@@ -1,0 +1,118 @@
+[res/layout/activity_main.xml]
+
+ConstraintLayout
+
+    FragmentContainerView
+        - id : fragmentContainerViewMain
+        - layout_width : 0dp
+        - layout_height : 0dp
+        - View와 좌측을 부모의 좌측으로
+        - View의 우측을 부모의 우측으로
+        - View의 상단을 부모의 상단으로
+        - View의 하단을 보무의 하단으로
+
+[res/layout/fragment_login.xml]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarLogin
+        - background : transparent
+
+    LinearLaoyout
+        - orientation : vertical
+        - padding : 10dp
+
+        TextInputLayout
+            - id : textFieldLoginPassword
+            - hint : 관리자 비밀번호
+            - startIconDrawable : lock_24px
+            - endIconMode : password_toggle
+            - layout_height : wrap_content
+            - layout_marginTop : 10dp
+
+            TextInputEditText
+                - hint : 삭제
+                - inputType : text|textPassword
+                - singleLine : true
+
+        Button
+            - id : buttonLoginSubmit
+            - text : 로그인
+            - layout_marginTop : 10dp
+
+[res/layout/fragment_setting_password.xml]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarSettingPassword
+        - background : transparent
+
+    LinearLayout
+        - orientation : vertical
+        - padding : 10dp
+
+        TextInputLayout
+            - id : textFieldSettingPassword1
+            - hint : 관리자 비밀번호
+            - startIconDrawable : lock_24px
+            - endIconMode : password_toggle
+            - layout_height : wrap_content
+            - layout_marginTop : 10dp
+
+            TextInputEditText
+                - hint : 삭제
+                - inputType : text|textPassword
+                - singleLine : true
+
+        TextInputLayout
+            - id : textFieldSettingPassword2
+            - hint : 관리자 비밀번호 확인
+            - startIconDrawable : lock_24px
+            - endIconMode : password_toggle
+            - layout_height : wrap_content
+            - layout_marginTop : 10dp
+
+            TextInputEditText
+                - hint : 삭제
+                - inputType : text|textPassword
+                - singleLine : true
+
+        Button
+            - id : buttonSettingPasswordSubmit
+            - text : 등록완료
+            - layout_marginTop : 10dp
+
+[res/layout/navigation_view_header_main.xml]
+
+LinearLayout
+    - orientation : vertical
+    - padding : 10dp
+    - layout_height : wrap_content
+
+    TextView
+        - text : 환영합니다.
+        - textAppearance : Large
+
+    TextView
+        - text : 관리자님.
+        - layout_marginTop : 10dp
+
+[res/layout/fragment_main.xml]
+
+DrawerLayout
+    - id : drawerLayoutMain
+
+    CoordinatorLayout
+
+        FragmentContainerView
+            - id : fragmentContainerViewNavigation
+
+    NavigationView
+        - id : navigationViewMain
+        - layout_gravity : start
