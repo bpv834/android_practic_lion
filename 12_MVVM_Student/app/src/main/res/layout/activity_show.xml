@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="showViewModel"
+            type="com.lion.a12_mvvm_student.viewmodel.ShowViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ShowActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewShowName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{showViewModel.textViewShowName}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewShowAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{showViewModel.textViewShowAge}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewShowKorean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{showViewModel.textViewShowKorean}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewShowEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{showViewModel.textViewShowEnglish}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewShowMath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{showViewModel.textViewShowMath}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

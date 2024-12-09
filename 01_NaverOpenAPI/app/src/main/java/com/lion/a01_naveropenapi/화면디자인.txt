@@ -1,0 +1,32 @@
+[ activity_main.xml ]
+
+ConstraintLayout
+
+    LinearLayout
+        - orientation : vertical
+
+        TextInputLayout
+            - id : textFieldKeyword
+            - hint : 검색어 입력
+            - endIconMode : clear_text
+            - layout_height : wrap_content
+
+            TextInputEditText
+                - hint : 삭제
+                - imeOptions : actionSearch
+                - singleLine : true
+
+        RecyclerView
+            - id : recyclerViewResult
+
+
+[ row.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - padding : 10dp
+    - layout_height : wrap_content
+
+    TextView
+        - id : textViewRow
+        - textAppearance : Large

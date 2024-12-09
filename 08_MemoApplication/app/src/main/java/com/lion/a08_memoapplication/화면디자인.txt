@@ -1,0 +1,78 @@
+[res/layout/navigation_header_layout.xml]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    TextView
+        - id : textViewNavigationHeaderTitle1
+
+    TextView
+        - id : textViewNavigationHeaderTitle2
+        - layout_marinTop : 10dp
+
+[res/layout/activity_main.xml]
+
+ConstraintLayout
+    - transitionGroup : true
+
+    DrawerLayout
+        -id : drawerLayoutMain
+        - 위 : 부모의 위
+        - 아래 : 부모의 아래
+        - 좌측 : 부모의 좌측
+        - 우측 : 부모의 우측
+
+        CoordinatorLayout
+
+            LinearLayout
+                - orientation : vertical
+
+                FragmentContainerView
+                    - id : fragmentContainerView
+
+        NavigationView
+            - id : navigationViewMain
+            - layout_gravity : start
+
+[res/layout/row_text1.xml]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+    - padding : 10dp
+    - layout_height : wrap_content
+
+    TextView
+        - id : textViewRow
+        - textAppearance : Large
+
+[res/layout/fragment_show_memo_all.xml]
+
+ConstraintLayout
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarShowMemoAll
+        - background : transparent
+        - 상단 : 부모의 상단
+        - 좌측 : 부모의 좌측
+        - 우측 : 부모의 우측
+        - layout_width : 0dp
+
+    RecyclerView
+        - id : recyclerViewShowMemoAll
+        - 상단 : toolbarShowMemoAll 의 하단
+        - 좌측 : 부모의 좌측
+        - 우측 : 부모의 우측
+        - 하단 : 부모의 하단
+        - layout_width : 0dp
+        - layout_height : 0dp
+
+    FAB
+        - id : fabShowMemoAllAdd
+        - icon : add_24px
+        - 우측 : 부모의 우측
+        - 하단 : 부모의 하단
+        - layout_marginEnd : 10dp
+        - layout_marginBottom : 10dp

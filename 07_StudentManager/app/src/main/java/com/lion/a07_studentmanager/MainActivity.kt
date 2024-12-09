@@ -1,5 +1,6 @@
 package com.lion.a07_studentmanager
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.os.SystemClock
 import android.view.View
@@ -11,11 +12,11 @@ import androidx.core.view.WindowInsetsCompat
 import com.lion.a07_studentmanager.databinding.ActivityMainBinding
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.transition.MaterialSharedAxis
 import com.lion.a07_studentmanager.fragment.LoginFragment
 import com.lion.a07_studentmanager.fragment.MainFragment
 import com.lion.a07_studentmanager.fragment.SettingPasswordFragment
-import com.lion.a07_studentmanager.fragment.ShowStudentFragment
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +36,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        replaceFragment(FragmentName.LOGIN_FRAGMENT, false, false, null)
+        // Preferences 객체를 가져온다.
+        val managerPef = getSharedPreferences("manager", MODE_PRIVATE)
+        // 저장되어 있는 비밀번호를 가져온다.
+        val managerPassword = managerPef.getString("password", null)
+        // 저장되어 있는 비밀번호가 없다면..
+        if(managerPassword == null){
+            replaceFragment(FragmentName.SETTING_PASSWORD_FRAGMENT, false, false, null)
+        } else {
+            replaceFragment(FragmentName.LOGIN_FRAGMENT, false, false, null)
+        }
     }
 
 
@@ -103,6 +113,17 @@ class MainActivity : AppCompatActivity() {
             currentFocus?.clearFocus()
         }
     }
+
+    // 확인 버튼만 있는 다이얼로그를 띄우는 메서드
+    fun showConfirmDialog(title:String, message:String, callback:() -> Unit){
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.setPositiveButton("확인"){ dialogInterface: DialogInterface, i: Int ->
+            callback()
+        }
+        builder.show()
+    }
 }
 
 // 프래그먼트들을 나타내는 값들
@@ -113,7 +134,4 @@ enum class FragmentName(var number:Int, var str:String){
     SETTING_PASSWORD_FRAGMENT(2, "SettingPasswordFragment"),
     // 메인 화면
     MAIN_FRAGMENT(3, "MainFragment"),
-
-
-
 }

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,7 +33,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text=" " />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -75,6 +77,7 @@
                 android:text="3학년" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,6 +118,7 @@
                 android:text="야구부" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -145,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="여자" />
+
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -160,7 +165,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text=" " />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -176,7 +182,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text=" " />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -192,7 +199,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text=" " />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -202,5 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="수정 완료" />
+
     </LinearLayout>
+
 </LinearLayout>

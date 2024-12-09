@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="inputViewModel"
+            type="com.lion.a12_mvvm_student.viewmodel.InputViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InputActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextInputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@={inputViewModel.editTextInputName}"/>
+
+            <EditText
+                android:id="@+id/editTextInputAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@={inputViewModel.editTextInputAge}"/>
+
+            <EditText
+                android:id="@+id/editTextInputKorean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@={inputViewModel.editTextInputKorean}"/>
+
+            <EditText
+                android:id="@+id/editTextInputEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@={inputViewModel.editTextInputEnglish}"/>
+
+            <EditText
+                android:id="@+id/editTextInputMath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@={inputViewModel.editTextInputMath}"/>
+
+            <Button
+                android:id="@+id/buttonInputSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="입력완료"
+                android:onClick="@{(view) -> inputViewModel.buttonInputSubmitOnClick()}"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:transitionGroup="true"
-    tools:context=".fragment.SearchStudentFragment">
+    tools:context=".fragment.SearchStudentFragment" >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarSearchStudent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/screen_background_light_transparent" />
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldSearchStudentName"
@@ -34,5 +36,4 @@
         android:id="@+id/recyclerViewSearchStudent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

@@ -9,8 +9,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/student_list_menu_search"
-        android:title="검색"
         android:icon="@drawable/search_24px"
-        app:showAsAction="always"
-        />
+        android:title="필터"
+        app:showAsAction="always" />
 </menu>
