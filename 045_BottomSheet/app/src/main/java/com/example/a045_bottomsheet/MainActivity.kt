@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
                 //"BottomSheepFragment": 이 문자열은 바텀시트 Fragment의 태그입니다.
                 // 필요할 때 해당 Fragment를 참조하거나 검색할 때 사용할 수 있습니다.
-                bottomSheetFragment.show(supportFragmentManager, "BottomSheepFragment")
+                bottomSheetFragment.show(supportFragmentManager, "BottomSheetFragment")
             }
         }
     }
